@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cow Chucker Test", "Assembly-CSharp-firstpass.csproj", "{047BE35B-9EA4-3553-2EAC-5B58B84A4ACA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cow Chucker Test", "Assembly-CSharp.csproj", "{4EF397F7-4E71-2E3B-CF32-05BF8C0328C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cow Chucker Test", "Assembly-CSharp-Editor-firstpass.csproj", "{38FE98F6-0C59-2F2A-DB33-CB8C4B68DB55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{047BE35B-9EA4-3553-2EAC-5B58B84A4ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047BE35B-9EA4-3553-2EAC-5B58B84A4ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047BE35B-9EA4-3553-2EAC-5B58B84A4ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047BE35B-9EA4-3553-2EAC-5B58B84A4ACA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4EF397F7-4E71-2E3B-CF32-05BF8C0328C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4EF397F7-4E71-2E3B-CF32-05BF8C0328C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EF397F7-4E71-2E3B-CF32-05BF8C0328C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EF397F7-4E71-2E3B-CF32-05BF8C0328C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38FE98F6-0C59-2F2A-DB33-CB8C4B68DB55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38FE98F6-0C59-2F2A-DB33-CB8C4B68DB55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38FE98F6-0C59-2F2A-DB33-CB8C4B68DB55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38FE98F6-0C59-2F2A-DB33-CB8C4B68DB55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
