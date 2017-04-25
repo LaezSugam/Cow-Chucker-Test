@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour {
 	public GameObject cow;
 	public Transform cowSpawn;
 
+	public float fireRate = 0.5f;
+	private float nextFire = 0.0f;
+
 	void Update(){
 
 
-		if (Input.GetButton ("Fire1")) {
-			//GameObject clone = 
-			Instantiate(cow, cowSpawn.position, cowSpawn.rotation);// as GameObject;
+		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			Instantiate(cow, cowSpawn.position, cowSpawn.rotation);
 
 		}
 	}
