@@ -14,7 +14,7 @@ public class Mover : MonoBehaviour {
 		rigidbody = GetComponent<Rigidbody> ();
 
 		rigidbody.AddForce(transform.forward * thrust);
-		rigidbody.AddForce (transform.up * thrust *10);
+		//rigidbody.AddForce (transform.up * thrust * 2);
 		
 	}
 	

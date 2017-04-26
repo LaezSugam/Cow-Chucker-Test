@@ -46,21 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LeapMotion\Editor\CustomEditorBase.cs" />
-     <Compile Include="Assets\LeapMotion\Editor\LeapHandControllerEditor.cs" />
-     <Compile Include="Assets\LeapMotion\Editor\LeapImageRetrieverEditor.cs" />
-     <Compile Include="Assets\LeapMotion\Editor\LeapServiceProviderEditor.cs" />
-     <Compile Include="Assets\LeapMotion\Editor\Tests\FrameValidator.cs" />
-     <Compile Include="Assets\LeapMotion\Editor\Tests\HandFactoryTest.cs" />
-     <Compile Include="Assets\LeapMotion\Editor\Tests\TransformCopyTest.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\Algorithms\Editor\Tests\SlidingMaxTest.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\Attributes\Editor\CombinablePropertyDrawer.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\DataStructures\Editor\SerializableDictionaryEditor.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\DataStructures\Editor\Tests\MinHeapTest.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\DataStructures\Editor\Tests\ProduceConsumeBufferTest.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\DataStructures\Editor\Tests\RingBufferTest.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\VR\Editor\EyeTypeEditor.cs" />
-     <Compile Include="Assets\LeapMotion\Scripts\VR\Editor\LeapTemporalWarpingEditor.cs" />
+     <Compile Include="Assets\LeapMotionModules\InteractionEngine\Scripts\Editor\InteractionBehaviourBaseEditor.cs" />
+     <Compile Include="Assets\LeapMotionModules\InteractionEngine\Scripts\Editor\InteractionManagerEditor.cs" />
+     <Compile Include="Assets\LeapMotionModules\InteractionEngine\Scripts\Editor\InteractionMaterialEditor.cs" />
+     <Compile Include="Assets\LeapMotionModules\InteractionEngine\Scripts\Editor\SingleLayerEditor.cs" />
+     <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
  <Reference Include="UnityEditor.Advertisements">
