@@ -4,9 +4,9 @@
     <Files>
       <File FileName="Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Mover.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CannonController.cs" Line="23" Column="46" />
-      <File FileName="Assets\Scripts\TubeController.cs" Line="19" Column="71" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="237" Column="27" />
+      <File FileName="Assets\Scripts\CannonController.cs" Line="37" Column="37" />
+      <File FileName="Assets\Scripts\TubeController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
