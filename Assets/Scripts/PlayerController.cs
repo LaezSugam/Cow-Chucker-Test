@@ -12,13 +12,20 @@ public class PlayerController : MonoBehaviour {
 	private int thrust = 1;
 	public int thrustMultiplier = 1;
 
-	public GameObject cam1;
-	public GameObject cam2;
+	public Camera cam1;
+	public Camera cam2;
+
+	private List<Camera> cameras = new List<Camera>();
+	public float cameraChangeRate = 0.5f;
+	private float nextCameraChange = 0.0f;
+	private int currentCam = 0;
 
 
 	void Start(){
-//		cam1.SetActive = true;
-//		cam2.SetActive = false;
+		cam1.enabled = true;
+		cam2.enabled = false;
+		cameras.Add (cam1);
+		cameras.Add (cam2);
 	}
 
 	void Update(){
@@ -39,5 +46,16 @@ public class PlayerController : MonoBehaviour {
 
 			thrust = 1;
 		}
+
+		if (Input.GetButton ("Camera") && Time.time > nextCameraChange) {
+			cameras [currentCam].enabled = false;
+			currentCam++;
+			if (currentCam >= cameras.Count) {
+				currentCam = 0;
+			}
+			cameras [currentCam].enabled = true;
+			nextCameraChange = Time.time + cameraChangeRate;
+		}
+			
 	}
 }
