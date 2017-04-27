@@ -1,0 +1,14 @@
+0001-0059 loop Idle
+0062-0109 loop sitting Idle
+0111-0127 loop Fight Idle
+0130-0157 loop Falling
+0160-0187 loop Attack Right Hand
+0195-0214 loop Attack Left Hand
+0223-0240 loop Hit Left
+0242-0262 loop Hit Right
+0264-0338 Nokout
+0340-0361 loop Walk
+0363-0378 loop Run
+0384-0409 loop Jump
+0420-0444 loop Jump01
+0448-0463 loop attack_01
