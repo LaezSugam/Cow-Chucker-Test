@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\CamTrigger1Collision.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CannonController.cs" />
+     <Compile Include="Assets\Scripts\DominoCollider.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\SuperCowlider.cs" />

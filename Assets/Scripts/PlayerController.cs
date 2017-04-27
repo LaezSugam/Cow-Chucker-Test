@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public GameObject cow;
 	public Transform cowSpawn;
+	private Transform cowHip;
 
 	public float fireRate = 0.5f;
 	private float nextFire = 0.0f;
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 
 	public Camera cam1;
 	public Camera cam2;
+	public Camera cam3;
+	public Camera cam4;
 
 	private List<Camera> cameras = new List<Camera>();
 	public float cameraChangeRate = 0.5f;
@@ -26,6 +29,8 @@ public class PlayerController : MonoBehaviour {
 		cam2.enabled = false;
 		cameras.Add (cam1);
 		cameras.Add (cam2);
+		cameras.Add (cam3);
+		cameras.Add (cam4);
 	}
 
 	void Update(){
@@ -37,7 +42,8 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetButtonUp ("Fire1")) {
 			GameObject cowInstance = Instantiate(cow, cowSpawn.position, cowSpawn.rotation);
-			Rigidbody cowRB = cowInstance.GetComponent<Rigidbody> ();
+			cowHip = cowInstance.transform.Find ("Character1_Hips").transform;
+			Rigidbody cowRB = cowHip.GetComponent<Rigidbody> ();
 			cowRB.AddForce (cowSpawn.transform.forward * thrust);
 
 //			GameObject cowHips = cowInstance.Find ("Character1_Hips") as GameObject;
