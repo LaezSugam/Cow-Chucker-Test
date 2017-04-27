@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour {
 //			GameObject cowHips = cowInstance.Find ("Character1_Hips") as GameObject;
 //			Rigidbody cowRB = cowHips.GetComponent<Rigidbody> ();
 //			cowRB.AddForce (cowSpawn.transform.forward * thrust);
+
+			thrust = 1;
 		}
 	}
 }
