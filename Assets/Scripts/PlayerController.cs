@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 	private float nextFire = 0.0f;
 	private int thrust = 1;
 	public int thrustMultiplier = 1;
+	public Text thrustText;
 
 	public Camera cam1;
 	public Camera cam2;
@@ -36,6 +38,8 @@ public class PlayerController : MonoBehaviour {
 		cameras.Add (cam4);
 		cameras.Add (cam5);
 		cameras.Add (cam6);
+
+		thrustText.text = "Thrust: " + 0;
 	}
 
 	void Update(){
@@ -43,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			thrust += thrustMultiplier;
+			thrustText.text = "Thrust: " + thrust/100;
 
 		}
 		if (Input.GetButtonUp ("Fire1")) {
