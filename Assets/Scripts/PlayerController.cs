@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject cow;
 	public Transform cowSpawn;
 	private Transform cowHip;
+	public Transform cheatSpawn;
 
 	public float fireRate = 0.5f;
 	private float nextFire = 0.0f;
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour {
 	public Camera cam2;
 	public Camera cam3;
 	public Camera cam4;
+	public Camera cam5;
+	public Camera cam6;
 
 	private List<Camera> cameras = new List<Camera>();
 	public float cameraChangeRate = 0.5f;
@@ -31,6 +34,8 @@ public class PlayerController : MonoBehaviour {
 		cameras.Add (cam2);
 		cameras.Add (cam3);
 		cameras.Add (cam4);
+		cameras.Add (cam5);
+		cameras.Add (cam6);
 	}
 
 	void Update(){
@@ -46,22 +51,36 @@ public class PlayerController : MonoBehaviour {
 			Rigidbody cowRB = cowHip.GetComponent<Rigidbody> ();
 			cowRB.AddForce (cowSpawn.transform.forward * thrust);
 
-//			GameObject cowHips = cowInstance.Find ("Character1_Hips") as GameObject;
-//			Rigidbody cowRB = cowHips.GetComponent<Rigidbody> ();
-//			cowRB.AddForce (cowSpawn.transform.forward * thrust);
 
 			thrust = 1;
 		}
 
+		if (Input.GetButtonUp ("Cheat")) {
+			GameObject cowInstance = Instantiate(cow, cheatSpawn.position, cheatSpawn.rotation);
+			cowHip = cowInstance.transform.Find ("Character1_Hips").transform;
+			Rigidbody cowRB = cowHip.GetComponent<Rigidbody> ();
+			cowRB.AddForce (cowSpawn.transform.forward * 20000);
+
+
+		}
+
 		if (Input.GetButton ("Camera") && Time.time > nextCameraChange) {
-			cameras [currentCam].enabled = false;
-			currentCam++;
-			if (currentCam >= cameras.Count) {
-				currentCam = 0;
+//			cameras [currentCam].enabled = false;
+//			currentCam++;
+//			if (currentCam >= cameras.Count) {
+//				currentCam = 0;
+//			}
+//			cameras [currentCam].enabled = true;
+
+			foreach (Camera cam in cameras) {
+				cam.enabled = false;
 			}
-			cameras [currentCam].enabled = true;
+			cam1.enabled = true;
+
 			nextCameraChange = Time.time + cameraChangeRate;
 		}
+
+
 			
 	}
 }

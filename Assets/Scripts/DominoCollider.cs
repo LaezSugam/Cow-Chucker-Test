@@ -12,6 +12,7 @@ public class DominoCollider : MonoBehaviour {
 	public int levelThreeScore = 2000;
 	public int levelFourScore = 4000;
 	public int superBonusScore = 1000000;
+	public GameObject destroyEffect;
 
 	private AudioSource audio;
 
@@ -27,6 +28,7 @@ public class DominoCollider : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.tag == "Cow") {
+			audio.Play ();
 			if (gameObject.tag == "Donovan" && Time.time > nextScore) {
 				gameController.AddScore (levelOneScore);
 				nextScore = Time.time + scoreGap;
@@ -34,6 +36,7 @@ public class DominoCollider : MonoBehaviour {
 			else if (gameObject.tag == "Devon" && Time.time > nextScore) {
 				gameController.AddScore (levelOneScore);
 				nextScore = Time.time + scoreGap;
+
 			}
 			else if (gameObject.tag == "Dan" && Time.time > nextScore) {
 				gameController.AddScore (levelTwoScore);
@@ -58,8 +61,10 @@ public class DominoCollider : MonoBehaviour {
 			else if (gameObject.tag == "Kris" && Time.time > nextScore) {
 				gameController.AddScore (superBonusScore);
 				nextScore = Time.time + scoreGap;
+				Vector3 effectPos = new Vector3 (transform.position.x, 1, transform.position.z);
+				GameObject fireworksInstance = Instantiate (destroyEffect, effectPos, transform.rotation);
+				fireworksInstance.transform.Rotate(Vector3.right * -90);
 			}
-			audio.Play ();
 		}
 	}
 
